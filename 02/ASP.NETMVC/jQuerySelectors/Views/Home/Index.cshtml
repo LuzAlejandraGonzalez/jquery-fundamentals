@@ -14,15 +14,18 @@
     <script src="Scripts/jquery-1.9.1.min.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            $('div.BlueDiv, div.RedDiv').css('border', '2px solid red');
+            $('#form1 :input').each(function () {
+                var elem = $(this); //This is wrapped in a jQuery wrapper
+                alert(elem.val());
+            });
         });
     </script>
 </head>
 <body>
-    <div id="TestDiv">
+    <div id="TestDiv" title="Div Title">
         This is my div text
     </div>
-    <div>
+    <div title="Contains Table">
         <table>
           <tr>
              <td>Cell 1 Row 1</td>
@@ -62,7 +65,7 @@
         <table style="width:300px;">
             <tr>
                 <td style="width:30%;">First Name</td>
-                <td style="width:70%;"><input id="FirstNameTextBox" value="" type="text" /></td>
+                <td style="width:70%;"><input id="FirstNameTextBox" value="John" type="text" /></td>
             </tr>
 
             <tr>
@@ -71,10 +74,25 @@
             </tr>
 
             <tr>
+                <td>Comments</td>
+                <td><textarea rows="5" cols="60" id="CommentsTextBox">TextArea</textarea></td>
+            </tr>
+
+            <tr>
+                <td>
+                    <select id="sel">
+                        <option value="AZ">AZ</option>
+                        <option value="CA" selected="true">CA</option>
+                    </select></td>
+                <td>&nbsp;</td>
+            </tr>
+
+            <tr>
                 <td><input id="SubmitButton" type="button" value="Submit" /></td>
                 <td>&nbsp;</td>
             </tr>
         </table>  
+
     </form>
 </body>
 </html>
