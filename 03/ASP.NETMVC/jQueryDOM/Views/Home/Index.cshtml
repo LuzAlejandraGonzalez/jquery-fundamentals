@@ -31,10 +31,12 @@
                         title: 'Some title 3',
                     }
                 )
-                .css('background-color', 'yellow')
-                .css('color', 'black')
-                .css('font-size', '20pt');
-
+                .css({
+                    'background-color': 'purple',
+                    'color': 'white',
+                    'font-size': '20pt'
+                }).text('Changed Color');
+       
             //Modifying the DOM.
             var tcd = $('#TableContainerDiv');
             tcd.append('<span style="background-color:green">Append Child 1</span>');
