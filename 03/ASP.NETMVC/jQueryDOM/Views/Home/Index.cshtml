@@ -17,6 +17,24 @@
             });
             var output = $('#OutputDiv');
             output.html(html);
+
+            //Modifying properties and attributes.
+            $('div.BlueDiv, div.RedDiv').each(function (index) {
+                //raw DOM Object
+                this.title = 'Some title';
+                $(this).attr('title','Some title 2');
+            });
+
+            $('div.BlueDiv, div.RedDiv')
+                .attr(
+                {
+                    title: 'Some title 3',
+                }
+             )
+             .css('background-color', 'yellow')
+             .css('color','black')
+             .css('font-size','20pt');
+
         });
     </script>
 </head>
