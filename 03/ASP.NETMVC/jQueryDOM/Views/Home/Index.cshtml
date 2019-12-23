@@ -47,12 +47,25 @@
             //Wrap
             $('span.Foo').wrap('<div class="RedDiv ParentWrapper"/>');
             $('div.ParentWrapper').each(function () {
-            alert($(this).html());
+                //alert($(this).html());
             });
 
             //Remove
             $('div.ParentWrapper').remove();
+
+            //Class functions
+            $('input[type="text"]').addClass('Highlight');
+            //$('#LastNameTextBox').removeClass('Highlight');
+
         });
+
+        function FocusBlur(tb) {
+            $(tb).toggleClass('Highlight')
+        }
+
+        function Blur(tb) {
+
+        }
     </script>
 </head>
 <body>
