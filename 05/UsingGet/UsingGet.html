@@ -10,12 +10,11 @@
                     $('#OutputDiv').html(data);
                 });
 
-                $.get('../CustomerJson.aspx', { id: 5 }, function (data) {
+                $.get('../CustomerJson.aspsx', { id: 5 }, function (data) {
                     alert('ID: ' + data.ID + ' ' + 
-                          data.FirstName + ' ' + data.LastName);
-                }, 'json');
-            });
-        });
+                        data.FirstName + ' ' + data.LastName);
+        },'json');
+    });
     </script>
 </head>
 <body>
